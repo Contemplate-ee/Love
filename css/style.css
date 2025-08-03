@@ -7,6 +7,9 @@ body, html {
   justify-content: center;
   align-items: center;
 }
+.update {
+  display: none;
+}
 .image {
   width: 7rem;
   height: 7rem;
@@ -36,9 +39,6 @@ h1 {
 
 .icon-animation {
   animation: icon-down 1.5s ease-in forwards;
-}
-h1 {
-  font-size: 45px;
 }
 .heart-container {
   position: absolute;

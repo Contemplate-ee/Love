@@ -24,15 +24,15 @@ function createHeart() {
   const heart = document.createElement("div");
   heart.classList.add('heart');
   heart.style.left = Math.random() * 100 + "vw";
-  const randomNum = +Math.random().toFixed(2);
+  const randomNum = +Math.random().toFixed(1);
   console.log(randomNum)
   const heartImg = document.createElement('img')
   heartImg.src =
-		randomNum == 0.37
+		randomNum == 0.1
 			? './assets/images/icons/викк копия.png'
-			: randomNum == 0.29
+			: randomNum == 0.9
 			? './assets/images/icons/викк 2 копия.png'
-			: randomNum == 0.77
+			: randomNum == 0
 			? './assets/images/icons/викк 3 копия.png'
 			: './assets/images/icons/love-icon.svg';
 
