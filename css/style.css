@@ -1,0 +1,135 @@
+body, html {
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  background: #f01bad;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 1000px;
+}
+h1 {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.love {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon {
+  position: absolute;
+  width: 11rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.icon-animation {
+  animation: icon-down 1.5s ease-in forwards;
+}
+h1 {
+  font-size: 45px;
+}
+.heart-container {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  width: 3rem;
+  opacity: 0;
+  animation: fall 3s linear forwards;
+  z-index: -1;
+}
+
+.heart img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.heart-create {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  margin: 0 10px;
+
+  position: absolute;
+  left: 45%; top: 45%;
+
+  background-color: red;
+
+  transform: rotate(-45deg);
+}
+
+.heart-create:before,
+.heart-create:after {
+  content: "";
+
+  position: absolute;
+  height: 50px;
+  width: 50px;
+
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart-create:before {
+  top: -25px;
+  left: 0;
+}
+
+.heart-create:after {
+  left: 25px;
+  top: 0;
+}
+
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes icon-down {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  30% {
+    transform: translate(-20%, -20%) rotate(-35deg);
+  }
+  80% {
+    transform: translate(-50%, 40vh) rotate(-35deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 40vh) rotate(-35deg);
+    opacity: 0;
+    display: none;
+  }
+}
+
